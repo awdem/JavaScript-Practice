@@ -148,4 +148,45 @@ const person = {
 This way is useful as a key-value data structure (similar to hashes or maps in other languages), or when you need a single, placeholder object (you'll see this later when you'll need to mock in your unit tests).
 
 
-The other way is to create objects from a class so they all have the same "blueprint" of attributes and methods. You'll learn about how to create JavaScript classes soon.
+The other way is to create objects from a class so they all have the same "blueprint" of attributes and methods. 
+
+## Classes
+
+Classes in JS work in a similar way to other languages, they are declared with methods — and perhaps attributes — and can be instantiated when creating instances.
+
+Here is how we can define a class:
+
+```JavaScript
+// file: rectangle.js
+
+class Rectangle {
+
+  // A constructor, to give initial arguments.
+  constructor(height, width) {
+
+    // We can define attributes stored on the instance with `this`
+    this.height = height;
+    this.width = width;
+  }
+
+  // A method.
+  getArea() {
+    return this.height * this.width;
+  }
+}
+
+// Export the class
+module.exports = Rectangle;
+```
+
+In the REPL (node):
+
+const Rectangle = require('./rectangle');
+
+Now we can make instances of the class by doing this:
+
+const rect = new Rectangle(4, 10);
+
+rect.getArea(); // 40
+
+
