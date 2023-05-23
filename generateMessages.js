@@ -12,4 +12,13 @@ const generateMessages = (array) => {
   return array.map(makePersonalMessage);
 };
 
+// alternative:
+
+// const generateMessages = (array) => {
+//   return array.map((name) => {
+//     return `Hi ${name}! 50% off our best candies for you today!`;
+//   });
+// };
+
+
 module.exports = { makePersonalMessage, generateMessages };
