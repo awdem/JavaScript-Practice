@@ -1,4 +1,5 @@
-const User = require('./user');
+// turns out you don't actually need this require if you have already required the class in node
+// const User = require('./user');
 
 class UserBase {
 
