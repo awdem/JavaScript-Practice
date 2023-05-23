@@ -190,3 +190,31 @@ const rect = new Rectangle(4, 10);
 rect.getArea(); // 40
 
 
+## Project Setup
+
+ In JavaScript, libraries are called packages and are listed in a file called package.json
+
+ to create the file, run:
+
+ ```
+ $ npm init -y 
+ ```
+
+ in an empty directory (The -y option skills all the questions we don't need to answer about the info contained in package.json).
+
+ Jest is a package for writing and running unit tests for JS code.
+
+ ```
+ # Add the jest package to our project
+# (this will update package.json and package-lock.json)
+$ npm add jest
+ ```
+
+We also need to run npm install -g jest. The -g option installs Jest "globally", so we can later run tests in a given project using the command jest.
+
+
+This folder can get very big, so if you are planning on committing this project, 
+you should add node_modules to your .gitignore file before you do. 
+It also allows us to use the jest command when we are in this folder.
+
+
