@@ -251,5 +251,32 @@ expect(obj1).toEqual(obj3); // Passes - deep equality check
 .toBe is useful for comparing primitive values or checking if two objects are the same instance (same memory reference). If you want to perform a deep equality check on objects or arrays, you should use the .toEqual matcher.
 
 
+## array method chaining
+map and filter can be chain as long as you don't put ; until the last method being chained. Watch out for what you're returning with each method because it can be tricky. forEach can't be chained
+
+## OOP desing and java script ()
+
+similar to Ruby so far:
+- think about what the classes are
+- think about how they link
+- think about what data they will keep
+
+this.variable is like an instance variable
+this also goes in front of methods within a class when they are called by other class methods
+
+instance variables can be set to private, and then they won't be accessible using dot notation (i.e. instance.variablename = variable_value)
+
+
+CamelCase for functions
+
+getter methods - get instance variables
+setter methods - set instance variables
+callback function - functions that are passed to other functions as arguments 
+
+You can put functions in your constructor methods to have a class  call that function when it constructs
+
+if it's a method within the class, you have to put this.methodname, 
+but you can also but functions from outside the class, without the this. in front of their name
+
 
 

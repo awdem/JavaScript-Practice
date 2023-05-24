@@ -1,4 +1,4 @@
-const Candy = require('./candy');
+const Candy = require('./Candy');
 
 
 describe('Candy', () => {
