@@ -217,4 +217,39 @@ This folder can get very big, so if you are planning on committing this project,
 you should add node_modules to your .gitignore file before you do. 
 It also allows us to use the jest command when we are in this folder.
 
+To make everything worked, run jest in the terminal and it should say:
+
+```
+"No tests found, exiting with code 1"
+```
+
+
+## .ToBe and .ToEqual
+
+.toBe checks for strict equality, .toEqual checks for deep equality
+
+Strict equality means that the objects have the same value, type and memory reference
+it uses the '===' operator.
+
+
+```JavaScript
+const obj1 = { name: 'John', age: 30 };
+const obj2 = { name: 'John', age: 30 };
+const obj3 = obj1;
+
+console.log(obj1 === obj2); // false - different memory references
+console.log(obj1 === obj3); // true - same memory reference
+
+expect(obj1).not.toBe(obj2); // Passes - different memory references
+expect(obj1).toBe(obj3); // Passes - same memory reference
+
+expect(obj1).toEqual(obj2); // Passes - deep equality check
+expect(obj1).toEqual(obj3); // Passes - deep equality check
+
+```
+
+.toBe is useful for comparing primitive values or checking if two objects are the same instance (same memory reference). If you want to perform a deep equality check on objects or arrays, you should use the .toEqual matcher.
+
+
+
 
