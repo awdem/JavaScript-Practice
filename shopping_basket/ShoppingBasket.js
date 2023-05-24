@@ -3,6 +3,11 @@ const candy = require('./candy')
 class ShoppingBasket {
   constructor() {
     this.basket = [];
+    this.discount = 0;
+  }
+
+  applyDiscount(discount) {
+    this.discount = discount;
   }
 
   addItem(candy) {
@@ -13,10 +18,11 @@ class ShoppingBasket {
     let sum = 0
     this.basket.forEach(item => {
       sum  += item.getPrice();
-    })
-    return sum
+    });
+    return sum - this.discount;
   }
 }
 
 
 module.exports = ShoppingBasket;
+

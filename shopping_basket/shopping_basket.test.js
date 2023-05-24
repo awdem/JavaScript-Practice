@@ -45,4 +45,12 @@ describe ('ShoppingBasket', () => {
     Basket.addItem(candydouble2);
     expect(Basket.getTotalPrice()).toBe(12.99);
   })
+
+  it('applies a discount', () => {
+    const Basket = new ShoppingBasket();
+    const candydouble = {getPrice: () => 50};
+    Basket.addItem(candydouble);
+    Basket.applyDiscount(10);
+    expect(Basket.getTotalPrice()).toBe(40);
+  })
 });
