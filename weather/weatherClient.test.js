@@ -40,7 +40,7 @@ describe('weatherClient', () => {
       },  
       weather: [
         { 
-          main: 'Clouds',
+          main: 'Clear',
         }
       ]
     }
@@ -54,7 +54,7 @@ describe('weatherClient', () => {
     expect(fetch.mock.calls[0][0]).toEqual("http://api.openweathermap.org/data/2.5/weather?units=metric&q=Pittsburgh&appid=undefined");
     // these check that the promise is resolving to the fake object correctly
     expect(response.main.name).toBe('Pittsburgh')
-    expect(response.weather[0].main).toBe('Clouds')
+    expect(response.weather[0].main).toBe('Clear')
   });
 
 });
