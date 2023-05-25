@@ -10,9 +10,9 @@ class WeatherClient {
     
   }
 
-  async fetchWeatherData() {
+  async fetchWeatherData(cityString) {
     const key = apiKey;
-    const city = 'London'
+    const city = cityString
     const apiUrl = `http://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}&appid=${key}`;
 
     const response = await fetch(apiUrl);
